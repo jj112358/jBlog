@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>五. 原型初步 | 杰哥课堂</title>
+    <meta name="description" content="杰哥出品">
+    <meta name="generator" content="VuePress 1.3.1">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.5c808b14.css" as="style"><link rel="preload" href="/assets/js/app.321d41b9.js" as="script"><link rel="preload" href="/assets/js/2.ab4310a8.js" as="script"><link rel="preload" href="/assets/js/11.6ad55b69.js" as="script"><link rel="prefetch" href="/assets/js/10.f2d458fd.js"><link rel="prefetch" href="/assets/js/12.c01fe802.js"><link rel="prefetch" href="/assets/js/13.a75c5cf2.js"><link rel="prefetch" href="/assets/js/14.b7e64910.js"><link rel="prefetch" href="/assets/js/15.6918f47c.js"><link rel="prefetch" href="/assets/js/16.b4083c06.js"><link rel="prefetch" href="/assets/js/3.232fa181.js"><link rel="prefetch" href="/assets/js/4.3b8bad7e.js"><link rel="prefetch" href="/assets/js/5.895b4ff8.js"><link rel="prefetch" href="/assets/js/6.317baa63.js"><link rel="prefetch" href="/assets/js/7.e27eaf99.js"><link rel="prefetch" href="/assets/js/8.2d64a9cd.js"><link rel="prefetch" href="/assets/js/9.03dc8f9a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5c808b14.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="杰哥课堂" class="logo"> <span class="site-name can-hide">杰哥课堂</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端教程" class="dropdown-title"><span class="title">前端教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/js_oop/" class="nav-link router-link-active">
+  JavaScript面向对象
+</a></li><li class="dropdown-item"><!----> <a href="/web/vue2/" class="nav-link">
+  Vue2.x快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/web/todolist/" class="nav-link">
+  从零打造前端项目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PHP教程" class="dropdown-title"><span class="title">PHP教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/php/mysql/" class="nav-link">
+  MySQL基础
+</a></li><li class="dropdown-item"><!----> <a href="/php/laravel54/" class="nav-link">
+  Laravel5.4快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/php/swoole/" class="nav-link">
+  Swoole快速入门
+</a></li></ul></div></div><div class="nav-item"><a href="https://space.bilibili.com/263804322" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  B站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端教程" class="dropdown-title"><span class="title">前端教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/js_oop/" class="nav-link router-link-active">
+  JavaScript面向对象
+</a></li><li class="dropdown-item"><!----> <a href="/web/vue2/" class="nav-link">
+  Vue2.x快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/web/todolist/" class="nav-link">
+  从零打造前端项目
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PHP教程" class="dropdown-title"><span class="title">PHP教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/php/mysql/" class="nav-link">
+  MySQL基础
+</a></li><li class="dropdown-item"><!----> <a href="/php/laravel54/" class="nav-link">
+  Laravel5.4快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/php/swoole/" class="nav-link">
+  Swoole快速入门
+</a></li></ul></div></div><div class="nav-item"><a href="https://space.bilibili.com/263804322" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  B站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>JavaScript面向对象</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/js_oop/" class="sidebar-link">课程介绍</a></li><li><a href="/web/js_oop/1-类和对象.html" class="sidebar-link">一. 类和对象</a></li><li><a href="/web/js_oop/2-JS中的类和对象.html" class="sidebar-link">二. 初步认识 JS 中的类和对象</a></li><li><a href="/web/js_oop/3-对象的方法.html" class="sidebar-link">三. 对象的方法</a></li><li><a href="/web/js_oop/4-对象实例化原理.html" class="sidebar-link">四. 对象实例化原理分析</a></li><li><a href="/web/js_oop/5-原型初步.html" class="active sidebar-link">五. 原型初步</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/js_oop/5-原型初步.html#_1-什么是原型模式" class="sidebar-link">1 什么是原型模式</a></li><li class="sidebar-sub-header"><a href="/web/js_oop/5-原型初步.html#_2-构造函数与原型对象的关系" class="sidebar-link">2 构造函数与原型对象的关系</a></li><li class="sidebar-sub-header"><a href="/web/js_oop/5-原型初步.html#_3-实例对象与原型对象的关系" class="sidebar-link">3 实例对象与原型对象的关系</a></li><li class="sidebar-sub-header"><a href="/web/js_oop/5-原型初步.html#_4-三者的关系" class="sidebar-link">4 三者的关系</a></li><li class="sidebar-sub-header"><a href="/web/js_oop/5-原型初步.html#_5-使用原型定义方法" class="sidebar-link">5 使用原型定义方法</a></li><li class="sidebar-sub-header"><a href="/web/js_oop/5-原型初步.html#_6-小结" class="sidebar-link">6 小结</a></li></ul></li><li><a href="/web/js_oop/6-原型深入.html" class="sidebar-link">六. 原型深入</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1><a href="#五-原型初步" class="header-anchor">#</a> 五. 原型初步</h1> <p>前面, 我们了解到属性可以定义在构造函数中, 但是==方法的定义==没有很好的解决方案.</p> <p>为了解决这个问题, 提出了<strong>原型模式</strong></p> <p>或者, 换句话说: ==原型的产生主要是为了解决<strong>方法共享</strong>的问题==</p> <h2><a href="#_1-什么是原型模式" class="header-anchor">#</a> 1 什么是原型模式</h2> <p>系统在创建构造函数的同时, 会自动在内存中生成一个与之相应的对象, 这个对象就是<strong>原型对象</strong></p> <p>比如:</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 定义一个构造函数</span>
+<span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>系统在创建 Person 构造函数的同时, 自动在内存中生成一个与之对应的 Person 原型对象</p> <p><img src="images/1566028407103.png" alt="1566028407103"></p> <p>由上图可知, 构造函数与原型对象是两个<strong>独立</strong>的内存空间</p> <h2><a href="#_2-构造函数与原型对象的关系" class="header-anchor">#</a> 2 构造函数与原型对象的关系</h2> <p>他们是相对独立的. 但是又存在联系</p> <blockquote><p>示例</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 一. 构造函数</span>
+<span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>uname <span class="token operator">=</span> n
+<span class="token punctuation">}</span>
+<span class="token comment">// 二. 打印构造函数的结构</span>
+console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>在 Person 构造函数的内部存在一个属性 <strong>prototype</strong>指向 Person 的原型对象</p> <p>在 Person 原型对象的内部也存在一个属性<strong>constructor</strong>指向 Person 的构造函数</p> <p><img src="images/1566028693235.png" alt="1566028693235"></p> <p>证明 Person 构造函数中存在 prototype 属性</p> <p><img src="images/1566030090490.png" alt="1566030090490"></p> <p>由上图可知, Person 构造函数中, 确实存在 prototype 属性, 该属性指向一个对象</p> <h2><a href="#_3-实例对象与原型对象的关系" class="header-anchor">#</a> 3 实例对象与原型对象的关系</h2> <p>在由 Person 类实例化出来的对象 person1 和 person2 中也有一个属性<code>__proto__</code>(隐式原型)指向原型对象</p> <blockquote><p>示例</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 一. 构造函数</span>
+<span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>uname <span class="token operator">=</span> n
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 二. 实例化对象</span>
+<span class="token keyword">var</span> person1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'xiaoming'</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> person2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'xiaomei'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 三. 打印person1和person2的内部结构</span>
+console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>person1<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>person2<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><blockquote><p>证明</p></blockquote> <p>由 Person 实例化出来的实例对象 person1 中存在<code>__proto__</code>属性指向 Person 的原型对象</p> <p><img src="images/1566095096622.png" alt="1566095096622"></p> <h2><a href="#_4-三者的关系" class="header-anchor">#</a> 4 三者的关系</h2> <p>构造函数的<code>prototype</code>属性和实例对象的<code>__proto__</code>属性指向同一个对象</p> <blockquote><p>示例</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 一. 定义构造函数</span>
+<span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>uname <span class="token operator">=</span> n
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 二. 实例化对象</span>
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'xiaoming'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 三. 测试</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype <span class="token operator">===</span> p<span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><blockquote><p>图解</p></blockquote> <p><img src="images/1568169094147.png" alt="1568169094147"></p> <h2><a href="#_5-使用原型定义方法" class="header-anchor">#</a> 5 使用原型定义方法</h2> <p>我们先大致了解下如何通过原型模式定义方法, 再具体分析</p> <blockquote><p>示例</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 一. 在构造函数中定义属性</span>
+<span class="token keyword">function</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token parameter">n<span class="token punctuation">,</span> a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>uname <span class="token operator">=</span> n
+  <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> a
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 二. 在原型中定义方法</span>
+<span class="token class-name">Student</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'大家好, 我叫'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>uname<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 三. 实例化对象</span>
+<span class="token keyword">var</span> stu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'xiaoming'</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> stu1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'xiaomei'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 比较不同的对象的方法是否相同</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>stu<span class="token punctuation">.</span>sayHi <span class="token operator">===</span> stu1<span class="token punctuation">.</span>sayHi<span class="token punctuation">)</span> <span class="token comment">// true</span>
+<span class="token comment">// 我们发现stu中并没有sayHi这个方法, 但是为什么可以使用呢?</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2><a href="#_6-小结" class="header-anchor">#</a> 6 小结</h2> <ul><li>在构造函数中定义属性</li> <li>在原型对象中定义方法</li></ul> <h1><a href="#" class="header-anchor">#</a></h1></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/js_oop/4-对象实例化原理.html" class="prev">
+        四. 对象实例化原理分析
+      </a></span> <span class="next"><a href="/web/js_oop/6-原型深入.html">
+        六. 原型深入
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.321d41b9.js" defer></script><script src="/assets/js/2.ab4310a8.js" defer></script><script src="/assets/js/11.6ad55b69.js" defer></script>
+  </body>
+</html>
